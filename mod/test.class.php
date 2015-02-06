@@ -18,6 +18,9 @@ class Test extends Base
         $ret = $this->curl($action,$params);
         return $ret;
     }
+    /**
+     *  @example http://cc.qiuhubang.com/test/captcha.json
+     */
     public function captcha(){
         $action  = self::hosturl.'/user/captcha.json';
         $params = array('email'=>"hfutming@gmail.com");

@@ -13,7 +13,7 @@ class User extends Base
     public function captcha()
     {
         $post = $_POST;
-        check_email($post['email']);
+        check_email($post);
         send_mail('22204361@qq.com','验证码是：123456','验证码是：123456，请确认');//测试
     }
 
