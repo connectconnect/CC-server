@@ -7,8 +7,8 @@
 
 class Test extends Base
 {
-    //const hosturl = 'http://cc.com';
-    const hosturl = 'http://cc.qiuhubang.com';
+    const hosturl = 'http://cc.com';
+    //const hosturl = 'http://cc.qiuhubang.com';
     /**
      *  @example http://cc.qiuhubang.com/test/register.json
      */

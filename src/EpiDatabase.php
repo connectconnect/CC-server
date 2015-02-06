@@ -107,7 +107,8 @@ class EpiDatabase
     }
     catch(PDOException $e)
     {
-      EpiException::raise(new EpiDatabaseQueryException("Query error: {$e->getMessage()} - {$sql}"));
+      //EpiException::raise(new EpiDatabaseQueryException("Query error: {$e->getMessage()} - {$sql}"));
+      throw new EpiException($e->getMessage());
       return false;
     }
   }
