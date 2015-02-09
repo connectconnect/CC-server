@@ -1,11 +1,12 @@
 <?php
-function send_mail($to, $subject = 'Your register infomation', $body) 
+function send_mail($to, $subject = 'cc 验证码', $body) 
 {
     $loc_host = "127.0.0.1";         
-    $smtp_acc = "你的账号地址";
-    $smtp_pass = "你的密码";       
-    $smtp_host = "SMTP地址";   
-    $from = "你的邮箱地址";     
+    $smtp_acc = "cc@qiuhubang.com";
+    $smtp_pass = "123qwe";       
+    $smtp_host = "smtp.exmail.qq.com";   
+    $from = "cc@qiuhubang.com";     
+
     $headers = "Content-Type: text/plain; charset=\"utf-8\"\r\nContent-Transfer-Encoding: base64";
     $lb = "\r\n";             //linebreak
         
