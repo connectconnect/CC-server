@@ -1,9 +1,0 @@
-<?php
-	define("HOSTNAME","localhost");
-	define("USERNAME","ihero");
-	define("PASSWORD","523325");
-	define("DATABASE","test");
-	define("CHARSET","utf8");
-	define("PCONNECT",1);
-	define("PAGE_COUNT",10);
-?>
