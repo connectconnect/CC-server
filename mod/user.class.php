@@ -14,7 +14,7 @@ class User extends Base
     {
         $post = $_POST;
         check_email($post);
-        send_mail('22204361@qq.com','cc 验证码','验证码是：123456，请确认');//测试
+        send_mail($post['email'],'cc 验证码','验证码是：123456，请确认');//测试
     }
 
     /**
