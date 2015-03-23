@@ -7,14 +7,14 @@
 
 class Test extends Base
 {
-    const hosturl = 'http://cc.com';
-    //const hosturl = 'http://cc.qiuhubang.com';
+    //const hosturl = 'http://cc.com';
+    const hosturl = 'http://cc.qiuhubang.com';
     /**
      *  @example http://cc.qiuhubang.com/test/register.json
      */
     public function register(){
         $action  = self::hosturl.'/user/register.json';
-        $params = array('email'=>"hfutming@gmail.com",'name'=>"nm",'password'=>"nm");
+        $params = array('email'=>"22204361@qq.com",'name'=>"nm",'password'=>"nm",'captcha'=>"");
         $ret = $this->curl($action,$params);
         return $ret;
     }

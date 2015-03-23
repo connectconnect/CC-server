@@ -92,4 +92,18 @@ if (!function_exists('is_post')) {
 		return false;
 	}
 }
-
+/**
+ * 生成指定长度的验证码
+ * @param int $len
+ * @return string
+ */
+if (!function_exists('create_rand_string')) {
+    function create_rand_string($len = 6)
+    {
+        $string = 'ABCDEFGHIJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+        $string = '0123456789';
+        $chars = str_shuffle($string);
+        $str = substr($chars, 0, $len);
+        return $str;
+    }
+}
