@@ -7,8 +7,8 @@
 
 class Test extends Base
 {
-    //const hosturl = 'http://cc.com';
-    const hosturl = 'http://cc.qiuhubang.com';
+    const hosturl = 'http://cc.com';
+    //const hosturl = 'http://cc.qiuhubang.com';
     /**
      *  @example http://cc.qiuhubang.com/test/register.json
      */
@@ -23,7 +23,7 @@ class Test extends Base
      */
     public function captcha(){
         $action  = self::hosturl.'/user/captcha.json';
-        $params = array('email'=>"hfutming@gmail.com");
+        $params = array('email'=>"22204361@qq.com");
         $ret = $this->curl($action,$params);
         return $ret;
     }

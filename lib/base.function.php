@@ -7,14 +7,26 @@
 if (!function_exists('db')) {
 	function db()
 	{
-        if (array_key_exists('db_', $GLOBALS)) {
+            if (array_key_exists('db_', $GLOBALS)) {
+                return $GLOBALS['db_'];
+            }
+            $config = parse_ini_file(ROOT.'/config/config.ini', true);
+            $config = $config['DataBase'];
+            EpiDatabase::employ('mysql',$config['dbname'],$config['host'],$config['username'],$config['password']);
+            $GLOBALS['db_'] = getDatabase();
             return $GLOBALS['db_'];
-        }
-		$config = parse_ini_file(ROOT.'/config/config.ini', true);
-        $config = $config['DataBase'];
-        EpiDatabase::employ('mysql',$config['dbname'],$config['host'],$config['username'],$config['password']);
-        $GLOBALS['db_'] = getDatabase();
-        return 	$GLOBALS['db_'];
+	}
+}
+if (!function_exists('redis')) {
+	function redis()
+	{
+            if (array_key_exists('redis_', $GLOBALS)) {
+                return $GLOBALS['redis_'];
+            }
+            $config = parse_ini_file(ROOT.'/config/config.ini', true);
+            $config = $config['Redis'];
+            $GLOBALS['redis_'] = getRedis($config);
+            return 	$GLOBALS['redis_'];
 	}
 }
 if (!function_exists('parse_route')) {

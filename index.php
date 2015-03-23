@@ -10,7 +10,7 @@ include ROOT.'/lib/base.class.php';
 include ROOT.'/lib/mail.function.php';
 
 Epi::setPath('base', ROOT.'/src');
-Epi::init('api', 'database');
+Epi::init('api', 'database', 'redis');
 $routes = parse_route($_GET['__route__']);
 if (!$routes) {
 	showEndpoints();

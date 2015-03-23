@@ -12,9 +12,14 @@ class User extends Base
     */
     public function captcha()
     {
-        $post = $_POST;
-        check_email($post);
-        send_mail($post['email'],'cc 验证码','验证码是：123456，请确认');//测试
+        check_email($_POST);
+        $keyRedis = "gu";
+        
+        redis()->set($keyRedis, "tesssst", null);
+
+        $rongyun_token =  redis()->get($keyRedis);
+        echo $rongyun_token;exit;
+        send_mail($_POST['email'],'cc 验证码','验证码是：123456，请确认');//测试
     }
 
     /**

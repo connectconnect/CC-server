@@ -19,6 +19,7 @@ class Epi
     'cache-memcached' => array('base', 'EpiCache.php', 'EpiCache_Memcached.php'),
     'config' => array('base', 'EpiConfig.php'),
     'database' => array('base', 'EpiDatabase.php'),
+    'redis' => array('base', 'EpiRedisClient.php'),
     'debug' => array('EpiDebug.php'),
     'route'  => array('base', 'EpiRoute.php'),
     'session' => array('base', 'EpiSession.php', 'session-php', 'session-apc', 'session-memcached'),
